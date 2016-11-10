@@ -35,7 +35,7 @@ class Connector extends \Emergence\Connectors\AbstractConnector
         if (!static::$exportKey) {
             throw new \Exception(__CLASS__.'::$exportKey not initialized');
         }
-        
+
         if ($_GET['export_key'] != static::$exportKey) {
             return static::throwAPIUnauthorizedError('export_key missing or incorrect');
         }
